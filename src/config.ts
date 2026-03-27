@@ -23,7 +23,7 @@ export const siteConfig: SiteConfig = {
   language: "en",
   keywords: "Mallorca, settlement services, expat, relocation, Spain, moving to Mallorca, residency, bureaucracy",
   ogImage: "/images/og-image.jpg",
-  canonical: "https://sonja-custodia.com",
+  canonical: "https://sonjaspeicher-custodia.com",
 };
 
 // -----------------------------------------------------------------------------
