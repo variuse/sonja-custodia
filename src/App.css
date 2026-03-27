@@ -1,0 +1,135 @@
+/* App-specific styles */
+
+/* Hero background parallax */
+.hero-bg {
+  will-change: transform;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom focus styles */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #C4A77D;
+  outline-offset: 2px;
+}
+
+/* Service card hover enhancement */
+.service-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #C4A77D, #8B7355);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Quote mark styling */
+.quote-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 6rem;
+  line-height: 1;
+  color: #C4A77D;
+  opacity: 0.3;
+}
+
+/* Impression image hover */
+.impression-img img {
+  transition: transform 0.5s ease-out;
+}
+
+.impression-img:hover img {
+  transform: scale(1.02);
+}
+
+/* Form input focus animation */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(196, 167, 125, 0.1);
+}
+
+/* Navigation transition */
+nav {
+  will-change: background-color, backdrop-filter;
+}
+
+/* Mobile menu animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.md\:hidden + div {
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Button ripple effect */
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Scroll indicator bounce */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+  
+  .section-padding {
+    padding: 4rem 0;
+  }
+  
+  .quote-mark {
+    font-size: 4rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  nav,
+  .animate-bounce {
+    display: none;
+  }
+  
+  .section-padding {
+    padding: 2rem 0;
+  }
+}
