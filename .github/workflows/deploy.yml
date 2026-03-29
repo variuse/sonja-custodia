@@ -1,4 +1,4 @@
-name: Deploy Coming Soon to Production
+name: Deploy to Production
 
 on:
   push:
@@ -8,16 +8,36 @@ permissions:
   contents: write
 
 jobs:
-  deploy-coming-soon:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy Coming Soon page to production
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npx tsc -b
+
+      - name: Build preview site
+        run: npx vite build --base=/preview/
+
+      - name: Assemble output
+        run: |
+          mkdir -p ./output/preview
+          cp -r ./coming-soon/. ./output/
+          cp -r ./dist/. ./output/preview/
+
+      - name: Deploy to production branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: production
-          publish_dir: ./coming-soon
+          publish_dir: ./output
           force_orphan: true
           cname: sonjaspeicher-custodia.com
