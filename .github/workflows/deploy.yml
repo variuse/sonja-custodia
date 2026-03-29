@@ -32,6 +32,7 @@ jobs:
           mkdir -p ./output/preview
           cp -r ./coming-soon/. ./output/
           cp -r ./dist/. ./output/preview/
+          cp -r ./public/images/. ./output/images/
 
       - name: Deploy to production branch
         uses: peaceiris/actions-gh-pages@v4
