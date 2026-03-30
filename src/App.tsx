@@ -12,8 +12,6 @@ import {
   Menu,
   X,
   Check,
-  ChefHat,
-  HardHat
 } from 'lucide-react';
 import './App.css';
 import { LanguageProvider, useLanguage } from './i18n/LanguageContext';
@@ -349,10 +347,6 @@ function AppContent() {
               </div>
               <div className="reveal-item flex gap-8 text-[#8B7355]">
                 <div>
-                  <span className="font-serif text-3xl">{t('philosophy.maxClients')}</span>
-                  <p className="text-sm text-[#6B6B6B]">{t('philosophy.clientsLabel')}</p>
-                </div>
-                <div>
                   <span className="font-serif text-3xl">{t('philosophy.location')}</span>
                   <p className="text-sm text-[#6B6B6B]">{t('philosophy.locationLabel')}</p>
                 </div>
@@ -430,28 +424,6 @@ function AppContent() {
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
-
-          {/* Additional Services */}
-          <div className="mt-12 grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            <div className="flex items-center gap-4 bg-white rounded-lg p-6">
-              <div className="w-12 h-12 bg-[#F5F2ED] rounded-full flex items-center justify-center flex-shrink-0">
-                <ChefHat className="w-6 h-6 text-[#C4A77D]" />
-              </div>
-              <div>
-                <h4 className="font-serif text-lg text-[#1A1A1A]">{t('services.privateChef')}</h4>
-                <p className="text-sm text-[#6B6B6B]">{t('services.onRequest')}</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 bg-white rounded-lg p-6">
-              <div className="w-12 h-12 bg-[#F5F2ED] rounded-full flex items-center justify-center flex-shrink-0">
-                <HardHat className="w-6 h-6 text-[#C4A77D]" />
-              </div>
-              <div>
-                <h4 className="font-serif text-lg text-[#1A1A1A]">{t('services.renovation')}</h4>
-                <p className="text-sm text-[#6B6B6B]">{t('services.onRequest')}</p>
-              </div>
             </div>
           </div>
 
@@ -549,7 +521,7 @@ function AppContent() {
                   </div>
                   <div>
                     <p className="text-sm text-[#6B6B6B]">{t('contact.phone')}</p>
-                    <p className="text-[#1A1A1A]">+34 123 456 789</p>
+                    <p className="text-[#1A1A1A]">+34 653 545 612</p>
                   </div>
                 </div>
 
@@ -569,7 +541,7 @@ function AppContent() {
                   </div>
                   <div>
                     <p className="text-sm text-[#6B6B6B]">{t('contact.whatsapp')}</p>
-                    <p className="text-[#1A1A1A]">+34 123 456 789</p>
+                    <p className="text-[#1A1A1A]">+34 653 545 612</p>
                   </div>
                 </div>
               </div>

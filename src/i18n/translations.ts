@@ -18,8 +18,6 @@ export interface Translations {
     headline: string;
     body: string;
     languages: string;
-    maxClients: string;
-    clientsLabel: string;
     location: string;
     locationLabel: string;
   };
@@ -104,12 +102,10 @@ export const translations: Record<Language, Translations> = {
     },
     philosophy: {
       headline: 'Nicht ein weiterer Hausmeister-Service',
-      body: 'Sonja ist die Vertrauensperson, die die Sprache ihrer Klienten spricht — buchstäblich und kulturell. 25 Jahre Luxus-Yachting haben ihr ein instinktives Verständnis dafür gegeben, was anspruchsvolle Eigentümer erwarten: Diskretion, Proaktivität, keine Ausreden.',
+      body: 'Sonja ist die Vertrauensperson, die die Sprache ihrer Klienten spricht — buchstäblich und kulturell. 25 Jahre Luxus-Yachting haben ihr ein instinktives Verständnis dafür gegeben, was anspruchsvolle Eigentümer erwarten: Diskretion, Proaktivität, keine Ausreden. Das ist Custòdia.',
       languages: 'Sprachen',
-      maxClients: 'Max. 5',
-      clientsLabel: 'Mandate',
-      location: 'Inselmitte',
-      locationLabel: '& Südwesten',
+      location: 'Inselmitte, Norden',
+      locationLabel: '& Nordosten',
     },
     services: {
       title: 'Leistungen',
@@ -136,7 +132,7 @@ export const translations: Record<Language, Translations> = {
         subtitle: 'Vorbereitung & Ankunfts-Service',
         features: [
           'Einkaufsservice nach persönlicher Liste',
-          'Haus detailverliebt vorbereitet: frisch gelüftet, geputzt, frische Blumen',
+          'Haus sorgfältig vorbereitet: frisch gelüftet, geputzt, frische Blumen',
           'Airport-Transfer Organisation',
           'Schlüsselübergabe & Einweisung bei Erstkunden',
           'Saisonale Vorbereitung: Öffnen/Schließen der Saison',
@@ -187,7 +183,7 @@ export const translations: Record<Language, Translations> = {
       },
     },
     footer: {
-      tagline: 'Private Property Care Mallorca',
+      tagline: 'Custòdia · Private Property Care Mallorca',
       imprint: 'Impressum',
       privacy: 'Datenschutz',
       copyright: '© 2026 Sonja Speicher. Alle Rechte vorbehalten.',
@@ -206,12 +202,10 @@ export const translations: Record<Language, Translations> = {
     },
     philosophy: {
       headline: 'Not just another property management service',
-      body: 'Sonja is the trusted person who speaks her clients\' language — literally and culturally. 25 years in luxury yachting have given her an instinctive understanding of what discerning owners expect: discretion, proactivity, no excuses.',
+      body: 'Sonja is the trusted person who speaks her clients\' language — literally and culturally. 25 years in luxury yachting have given her an instinctive understanding of what discerning owners expect: discretion, proactivity, no excuses. That is Custòdia.',
       languages: 'Languages',
-      maxClients: 'Max. 5',
-      clientsLabel: 'Clients',
-      location: 'Central',
-      locationLabel: '& Southwest',
+      location: 'Central, North',
+      locationLabel: '& Northeast',
     },
     services: {
       title: 'Services',
@@ -238,7 +232,7 @@ export const translations: Record<Language, Translations> = {
         subtitle: 'Preparation & arrival service',
         features: [
           'Shopping service according to personal list',
-          'House prepared with attention to detail: freshly ventilated, cleaned, fresh flowers',
+          'House carefully prepared: freshly ventilated, cleaned, fresh flowers',
           'Airport transfer organization',
           'Key handover & briefing for first-time clients',
           'Seasonal preparation: opening/closing the season',
@@ -289,7 +283,7 @@ export const translations: Record<Language, Translations> = {
       },
     },
     footer: {
-      tagline: 'Private Property Care Mallorca',
+      tagline: 'Custòdia · Private Property Care Mallorca',
       imprint: 'Imprint',
       privacy: 'Privacy Policy',
       copyright: '© 2026 Sonja Speicher. All rights reserved.',
@@ -308,12 +302,10 @@ export const translations: Record<Language, Translations> = {
     },
     philosophy: {
       headline: 'Pas un autre service de gestion immobilière',
-      body: 'Sonja est la personne de confiance qui parle la langue de ses clients — littéralement et culturellement. 25 ans dans le yachting de luxe lui ont donné une compréhension instinctive de ce que les propriétaires exigeants attendent: discrétion, proactivité, pas d\'excuses.',
+      body: 'Sonja est la personne de confiance qui parle la langue de ses clients — littéralement et culturellement. 25 ans dans le yachting de luxe lui ont donné une compréhension instinctive de ce que les propriétaires exigeants attendent: discrétion, proactivité, pas d\'excuses. C\'est Custòdia.',
       languages: 'Langues',
-      maxClients: 'Max. 5',
-      clientsLabel: 'Clients',
-      location: 'Centre',
-      locationLabel: '& Sud-Ouest',
+      location: 'Centre, Nord',
+      locationLabel: '& Nord-Est',
     },
     services: {
       title: 'Services',
@@ -340,7 +332,7 @@ export const translations: Record<Language, Translations> = {
         subtitle: 'Préparation & service d\'arrivée',
         features: [
           'Service de courses selon liste personnelle',
-          'Maison préparée avec souci du détail: aérée, nettoyée, fleurs fraîches',
+          'Maison soigneusement préparée: aérée, nettoyée, fleurs fraîches',
           'Organisation du transfert aéroport',
           'Remise des clés & briefing pour nouveaux clients',
           'Préparation saisonnière: ouverture/fermeture de saison',
@@ -391,7 +383,7 @@ export const translations: Record<Language, Translations> = {
       },
     },
     footer: {
-      tagline: 'Private Property Care Mallorca',
+      tagline: 'Custòdia · Private Property Care Mallorca',
       imprint: 'Mentions légales',
       privacy: 'Politique de confidentialité',
       copyright: '© 2026 Sonja Speicher. Tous droits réservés.',
@@ -410,12 +402,10 @@ export const translations: Record<Language, Translations> = {
     },
     philosophy: {
       headline: 'No es otro servicio de administración de propiedades',
-      body: 'Sonja es la persona de confianza que habla el idioma de sus clientes — literal y culturalmente. 25 años en yates de lujo le han dado una comprensión instintiva de lo que los propietarios exigentes esperan: discreción, proactividad, sin excusas.',
+      body: 'Sonja es la persona de confianza que habla el idioma de sus clientes — literal y culturalmente. 25 años en yates de lujo le han dado una comprensión instintiva de lo que los propietarios exigentes esperan: discreción, proactividad, sin excusas. Eso es Custòdia.',
       languages: 'Idiomas',
-      maxClients: 'Máx. 5',
-      clientsLabel: 'Clientes',
-      location: 'Centro',
-      locationLabel: '& Suroeste',
+      location: 'Centro, Norte',
+      locationLabel: '& Noreste',
     },
     services: {
       title: 'Servicios',
@@ -442,7 +432,7 @@ export const translations: Record<Language, Translations> = {
         subtitle: 'Preparación & servicio de llegada',
         features: [
           'Servicio de compras según lista personal',
-          'Casa preparada con atención al detalle: ventilada, limpia, flores frescas',
+          'Casa cuidadosamente preparada: ventilada, limpia, flores frescas',
           'Organización de traslado al aeropuerto',
           'Entrega de llaves & briefing para nuevos clientes',
           'Preparación estacional: apertura/cierre de temporada',
@@ -493,7 +483,7 @@ export const translations: Record<Language, Translations> = {
       },
     },
     footer: {
-      tagline: 'Private Property Care Mallorca',
+      tagline: 'Custòdia · Private Property Care Mallorca',
       imprint: 'Aviso legal',
       privacy: 'Política de privacidad',
       copyright: '© 2026 Sonja Speicher. Todos los derechos reservados.',
