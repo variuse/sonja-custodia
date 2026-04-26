@@ -22,6 +22,7 @@ gsap.registerPlugin(ScrollTrigger);
 function AppContent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isNavVisible, setIsNavVisible] = useState(false);
+  const [navProgress, setNavProgress] = useState(0);
   const { t, currentLanguage } = useLanguage();
   
   const heroRef = useRef<HTMLDivElement>(null);
@@ -33,8 +34,15 @@ function AppContent() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsNavVisible(window.scrollY > window.innerHeight * 0.5);
+      const h = window.innerHeight;
+      const y = window.scrollY;
+      const start = h * 0.55;
+      const end = h * 0.75;
+      const progress = Math.max(0, Math.min(1, (y - start) / (end - start)));
+      setNavProgress(progress);
+      setIsNavVisible(progress > 0.5);
     };
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
 
     // Hero parallax
@@ -186,13 +194,20 @@ function AppContent() {
     <div className="min-h-screen bg-[#FAF8F5]">
       {/* Navigation */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isNavVisible
-            ? 'bg-[#FAF8F5]/95 backdrop-blur-md shadow-sm'
-            : 'bg-transparent'
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 transition-shadow duration-500"
+        style={{
+          boxShadow: navProgress > 0.85 ? '0 1px 3px rgba(0, 0, 0, 0.05)' : 'none',
+        }}
       >
-        <div className="container-custom">
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-black/55 to-transparent pointer-events-none"
+          style={{ opacity: 1 - navProgress }}
+        />
+        <div
+          className="absolute inset-0 bg-[#FAF8F5] pointer-events-none"
+          style={{ opacity: navProgress }}
+        />
+        <div className="container-custom relative">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <button
@@ -286,18 +301,18 @@ function AppContent() {
       >
         <div className="hero-bg absolute inset-0">
           <img
-            src="/images/IMG_3747.jpeg"
-            alt="Pool at sunset"
+            src="/images/20260405_182836.jpg"
+            alt="View through stone arch onto pool and garden"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_45%_at_center,rgba(0,0,0,0.45)_0%,rgba(0,0,0,0.15)_60%,rgba(0,0,0,0)_100%)]" />
         </div>
 
         <div className="hero-content relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white max-w-4xl mb-6">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white max-w-4xl mb-6 [text-shadow:0_2px_16px_rgba(0,0,0,0.45)]">
             {t('hero.headline')}
           </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-10">
+          <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-10 [text-shadow:0_1px_8px_rgba(0,0,0,0.5)]">
             {t('hero.subline')}
           </p>
           <button
@@ -319,8 +334,8 @@ function AppContent() {
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="reveal-item order-2 md:order-1">
               <img
-                src="/images/IMG_1784.jpeg"
-                alt="Finca exterior"
+                src="/images/20260426_094945.jpg"
+                alt="Finca exterior with bougainvillea"
                 className="w-full h-[500px] object-cover rounded-lg shadow-lg"
               />
             </div>
@@ -486,15 +501,15 @@ function AppContent() {
             </div>
             <div className="impression-img">
               <img
-                src="/images/IMG_1785.jpeg"
-                alt="Garden with cat"
+                src="/images/20260426_095025.jpg"
+                alt="Bougainvillea and pergola entrance"
                 className="w-full h-80 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
               />
             </div>
             <div className="impression-img">
               <img
-                src="/images/IMG_1959.jpeg"
-                alt="Wine by the sea"
+                src="/images/20260426_094553_01.jpg"
+                alt="Pergola with wisteria and outdoor dining"
                 className="w-full h-80 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
               />
             </div>
