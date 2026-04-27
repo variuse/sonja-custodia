@@ -9,15 +9,17 @@ read the Anytype pages listed in the [Anytype Index](#anytype-index) section.
 
 ---
 
-## Current Live State (as of 2026-04-27)
+## Current Live State (as of 2026-04-28)
 
 | Aspect | Value |
 |:---|:---|
 | Hauptdomain | sonjaspeicher-custodia.com |
+| Domain redirects | sonjaspeicher.com + custodia-mallorca.com → 301 → Hauptdomain (Porkbun URL Forwarding) |
 | Public surface | Coming-Soon page at `/`, full draft at `/preview/` |
 | Languages live | DE / EN / FR / ES |
 | Legal pages | `/preview/#impressum`, `/preview/#datenschutz` (hash-routed via LegalPage component) |
-| Contact form | AJAX `POST` to Formsubmit (`https://formsubmit.co/ajax/hello@sonjaspeicher-custodia.com`); subject hard-coded to `Kontaktformular - sonjaspeicher-custodia.com`; reply-to = submitter's email field. Forwards via Porkbun alias → Sonja's GMX. Inline success/error UI (no redirect). |
+| Contact form | AJAX `POST` to Formsubmit (`https://formsubmit.co/ajax/hello@sonjaspeicher-custodia.com`); subject hard-coded to `Kontaktformular - sonjaspeicher-custodia.com`; reply-to = submitter's email field. **Activated 2026-04-27, fully live.** |
+| Email setup | 12 Porkbun aliases (`hello`/`hi`/`info`/`mail` × 3 domains); 11 forward directly to `sonja.speicher@gmx.de`; `hello@sonjaspeicher-custodia.com` is a Porkbun mailbox with Sieve filter redirecting to GMX. GMX Send-As verified for `hello@`, replies leave from brand domain. |
 | Hosting | GitHub Pages, deploy on push to `main` (Actions builds `./dist` → `production` branch) |
 | Rechtsform | Autónoma — Sonja persönlich, NIE X8224719B, Polígono 5 Parcela 263, 07529 Ariany |
 
@@ -62,6 +64,12 @@ Tracked in the Businessplan v0.6 (Anytype). Highlights: Berufshaftpflicht prüfe
 ---
 
 ## Changelog (reverse chrono)
+
+### 2026-04-28 — Email + domain infrastructure complete
+- `sonjaspeicher.com` redirect fixed: was pointing to GitHub Pages IPs and 404'ing; switched to Porkbun URL Forwarding 301 → Hauptdomain (matches `custodia-mallorca.com` setup).
+- All 11 non-`hello@` aliases verified as direct forwards to `sonja.speicher@gmx.de` (decision against funneling through `hello@` mailbox — extra hop = SPF/spam-filter risk for no functional gain; GMX is already the single inbox).
+- End-to-end loop confirmed working: visitor form submission → Formsubmit → Porkbun mailbox → Sieve filter → Sonja's GMX. Replies from GMX → Porkbun SMTP → recipient sees `From: hello@sonjaspeicher-custodia.com`.
+- Production-ready. No further infrastructure work pending.
 
 ### 2026-04-27 — Mailbox + Datenschutz update for Porkbun
 - Sonja got a Porkbun-hosted mailbox for `hello@sonjaspeicher-custodia.com` to enable Send-As from GMX. Forwarding still routes inbound to her GMX inbox; the mailbox primarily provides SMTP credentials so replies leave with the brand domain as From.

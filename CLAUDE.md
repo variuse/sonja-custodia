@@ -40,6 +40,27 @@ No test suite configured.
 
 Push to `main` → GitHub Actions builds → deploys `./dist` to the `production` branch → served via GitHub Pages at `sonjaspeicher-custodia.com`.
 
+## Domain & email infrastructure (Porkbun)
+
+All three domains are registered via Porkbun under Frederik's account. Sonja is not the registrant — the website is operated by Sonja per Impressum, but DNS/registrar control sits with Frederik.
+
+**Domains:**
+- `sonjaspeicher-custodia.com` — canonical, A records → GitHub Pages
+- `sonjaspeicher.com` — Porkbun URL Forwarding 301 → canonical
+- `custodia-mallorca.com` — Porkbun URL Forwarding 301 → canonical
+
+**Email — 12 aliases per Porkbun (`hello`, `hi`, `info`, `mail` × 3 domains):**
+- `hello@sonjaspeicher-custodia.com` is a **Porkbun mailbox** ($1.49/mo). All other 11 aliases remain plain forwards. The mailbox exists primarily to provide SMTP credentials so GMX can Send-As from the brand domain.
+- The mailbox has a Sieve filter (`rainloop.user`) that redirects all incoming mail to `sonja.speicher@gmx.de` and discards the original — i.e., the mailbox is effectively forward-only at runtime, the inbox stays empty.
+- The other 11 aliases forward directly to `sonja.speicher@gmx.de`.
+- **GMX side:** Send-As verified for `hello@sonjaspeicher-custodia.com`. Sonja replies in GMX → outbound goes via Porkbun SMTP → recipient sees `From: hello@sonjaspeicher-custodia.com`, not her personal GMX address.
+
+**Contact form:**
+- AJAX `POST` from `App.tsx` to `https://formsubmit.co/ajax/hello@sonjaspeicher-custodia.com`. Subject hard-coded to `Kontaktformular - sonjaspeicher-custodia.com` (filterable in GMX). Reply-To = the form's email field. Honeypot, inline status UI.
+- Activated 2026-04-27 — no further activation steps needed.
+
+**Datenschutz** discloses Formsubmit (FormSubmit, US) and Porkbun (Portland, OR, USA) as Art. 46 GDPR processors.
+
 ## Architecture
 
 Single-page React app (no router). The entire page is one long scroll in `src/App.tsx`: Navigation → Hero → Philosophy → Services → About → Impressions → Contact → Footer.
