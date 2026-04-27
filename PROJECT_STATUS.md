@@ -63,6 +63,12 @@ Tracked in the Businessplan v0.6 (Anytype). Highlights: Berufshaftpflicht prüfe
 
 ## Changelog (reverse chrono)
 
+### 2026-04-27 — Mailbox + Datenschutz update for Porkbun
+- Sonja got a Porkbun-hosted mailbox for `hello@sonjaspeicher-custodia.com` to enable Send-As from GMX. Forwarding still routes inbound to her GMX inbox; the mailbox primarily provides SMTP credentials so replies leave with the brand domain as From.
+- GMX Send-As verified — Sonja can now reply from `hello@sonjaspeicher-custodia.com` instead of her personal GMX address.
+- Datenschutz section "Kontaktformular" → renamed to "Kontaktformular und E-Mail-Korrespondenz" (and EN/FR/ES equivalents). New paragraph discloses Porkbun, LLC (Portland, OR, USA) as email-infrastructure processor, with Art. 46 GDPR safeguards reference.
+- Formsubmit activation confirmed live (`success: true` from POST). Form is operational end-to-end.
+
 ### 2026-04-27 — Contact form backend via Formsubmit
 - Replaced `mailto:` handler with AJAX `POST` to `https://formsubmit.co/ajax/hello@sonjaspeicher-custodia.com`. No backend, no account — Formsubmit verifies the destination once via confirmation email, then forwards every submission as an email.
 - Subject is hard-coded to `Kontaktformular - sonjaspeicher-custodia.com` across all 4 languages (Sonja can filter by subject in GMX). `_template: "table"` formats the message body. Reply-To defaults to the form's `email` field, so Sonja can reply to a submitter directly from GMX.
