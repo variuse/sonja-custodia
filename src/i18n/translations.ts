@@ -102,7 +102,7 @@ export const translations: Record<Language, Translations> = {
     },
     philosophy: {
       headline: 'Nicht ein weiterer Hausmeister-Service',
-      body: 'Sonja ist die Vertrauensperson, die die Sprache ihrer Klienten spricht — buchstäblich und kulturell. 25 Jahre Luxus-Yachting haben ihr ein instinktives Verständnis dafür gegeben, was anspruchsvolle Eigentümer erwarten: Diskretion, Proaktivität, keine Ausreden. Das ist Custòdia.',
+      body: 'Sonja ist die Vertrauensperson, die die Sprache ihrer Klienten spricht — buchstäblich und kulturell. 25 Jahre Luxus-Yachting haben ihr ein instinktives Verständnis dafür gegeben, was anspruchsvolle Eigentümer erwarten: Diskretion, Proaktivität, Verlässlichkeit — und ein Ansprechpartner, der erreichbar ist, wenn es darauf ankommt. Das ist Custòdia.',
       languages: 'Sprachen',
       location: 'Inselmitte, Norden',
       locationLabel: '& Nordosten',
@@ -154,7 +154,7 @@ export const translations: Record<Language, Translations> = {
     about: {
       title: 'Über Sonja',
       paragraph1: '25 Jahre als Chief Stewardess auf Luxusyachten. Über 15 Jahre auf Mallorca zuhause — mit eigener Finca, die sie drei Jahre lang persönlich gebaut hat.',
-      paragraph2: 'Sonja versteht instinktiv, was anspruchsvolle Menschen erwarten. Vertrauenswürdigkeit, Vorausdenken, klare Lösungen statt Ausflüchte. Dieses Serviceverständnis ist nicht antrainiert, es ist Berufsidentität.',
+      paragraph2: 'Sonja versteht instinktiv, was anspruchsvolle Menschen erwarten. Vertrauenswürdigkeit, Vorausdenken, klare Lösungen. Dieses Serviceverständnis ist nicht antrainiert, es ist Berufsidentität.',
       quote: 'Ich kümmere mich um wenige Anwesen — dafür um jedes wie um mein eigenes.',
       signature: '— Sonja Speicher',
     },
@@ -202,7 +202,7 @@ export const translations: Record<Language, Translations> = {
     },
     philosophy: {
       headline: 'Not just another property management service',
-      body: 'Sonja is the trusted person who speaks her clients\' language — literally and culturally. 25 years in luxury yachting have given her an instinctive understanding of what discerning owners expect: discretion, proactivity, no excuses. That is Custòdia.',
+      body: 'Sonja is the trusted person who speaks her clients\' language — literally and culturally. 25 years in luxury yachting have given her an instinctive understanding of what discerning owners expect: discretion, proactivity, reliability — and a point of contact who is reachable when it matters. That is Custòdia.',
       languages: 'Languages',
       location: 'Central, North',
       locationLabel: '& Northeast',
@@ -254,7 +254,7 @@ export const translations: Record<Language, Translations> = {
     about: {
       title: 'About Sonja',
       paragraph1: '25 years as Chief Stewardess on luxury yachts. Over 15 years at home in Mallorca — with her own Finca, which she personally built over three years.',
-      paragraph2: 'Sonja instinctively understands what demanding people expect. Trustworthiness, foresight, clear solutions instead of excuses. This service mindset is not trained, it is professional identity.',
+      paragraph2: 'Sonja instinctively understands what demanding people expect. Trustworthiness, foresight, clear solutions. This service mindset is not trained, it is professional identity.',
       quote: 'I care for only a few properties — but for each one as if it were my own.',
       signature: '— Sonja Speicher',
     },
@@ -302,7 +302,7 @@ export const translations: Record<Language, Translations> = {
     },
     philosophy: {
       headline: 'Pas un autre service de gestion immobilière',
-      body: 'Sonja est la personne de confiance qui parle la langue de ses clients — littéralement et culturellement. 25 ans dans le yachting de luxe lui ont donné une compréhension instinctive de ce que les propriétaires exigeants attendent: discrétion, proactivité, pas d\'excuses. C\'est Custòdia.',
+      body: 'Sonja est la personne de confiance qui parle la langue de ses clients — littéralement et culturellement. 25 ans dans le yachting de luxe lui ont donné une compréhension instinctive de ce que les propriétaires exigeants attendent : discrétion, proactivité, fiabilité — et un interlocuteur joignable quand cela compte. C\'est Custòdia.',
       languages: 'Langues',
       location: 'Centre, Nord',
       locationLabel: '& Nord-Est',
@@ -354,7 +354,7 @@ export const translations: Record<Language, Translations> = {
     about: {
       title: 'À propos de Sonja',
       paragraph1: '25 ans comme Chief Stewardess sur des yachts de luxe. Plus de 15 ans à domicile à Majorque — avec sa propre Finca, qu\'elle a construite personnellement pendant trois ans.',
-      paragraph2: 'Sonja comprend instinctivement ce que les gens exigeants attendent. Fiabilité, anticipation, des solutions claires plutôt que des excuses. Cette mentalité de service n\'est pas entraînée, c\'est l\'identité professionnelle.',
+      paragraph2: 'Sonja comprend instinctivement ce que les gens exigeants attendent. Confiance, anticipation, des solutions claires. Cette mentalité de service n\'est pas entraînée, c\'est l\'identité professionnelle.',
       quote: 'Je m\'occupe de peu de propriétés — mais de chacune comme s\'il s\'agissait de la mienne.',
       signature: '— Sonja Speicher',
     },
@@ -402,7 +402,7 @@ export const translations: Record<Language, Translations> = {
     },
     philosophy: {
       headline: 'No es otro servicio de administración de propiedades',
-      body: 'Sonja es la persona de confianza que habla el idioma de sus clientes — literal y culturalmente. 25 años en yates de lujo le han dado una comprensión instintiva de lo que los propietarios exigentes esperan: discreción, proactividad, sin excusas. Eso es Custòdia.',
+      body: 'Sonja es la persona de confianza que habla el idioma de sus clientes — literal y culturalmente. 25 años en yates de lujo le han dado una comprensión instintiva de lo que los propietarios exigentes esperan: discreción, proactividad, fiabilidad — y un interlocutor accesible cuando importa. Eso es Custòdia.',
       languages: 'Idiomas',
       location: 'Centro, Norte',
       locationLabel: '& Noreste',
@@ -454,7 +454,7 @@ export const translations: Record<Language, Translations> = {
     about: {
       title: 'Sobre Sonja',
       paragraph1: '25 años como Chief Stewardess en yates de lujo. Más de 15 años en casa en Mallorca — con su propia Finca, que construyó personalmente durante tres años.',
-      paragraph2: 'Sonja entiende instintivamente lo que las personas exigentes esperan. Confiabilidad, previsión, soluciones claras en lugar de excusas. Esta mentalidad de servicio no está entrenada, es identidad profesional.',
+      paragraph2: 'Sonja entiende instintivamente lo que las personas exigentes esperan. Compromiso, previsión, soluciones claras. Esta mentalidad de servicio no está entrenada, es identidad profesional.',
       quote: 'Cuido de pocas propiedades — pero de cada una como si fuera la mía.',
       signature: '— Sonja Speicher',
     },
