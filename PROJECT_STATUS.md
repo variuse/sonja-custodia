@@ -17,7 +17,7 @@ read the Anytype pages listed in the [Anytype Index](#anytype-index) section.
 | Public surface | Coming-Soon page at `/`, full draft at `/preview/` |
 | Languages live | DE / EN / FR / ES |
 | Legal pages | `/preview/#impressum`, `/preview/#datenschutz` (hash-routed via LegalPage component) |
-| Contact form | mailto-based, opens user's mail client → `hello@sonjaspeicher.com` |
+| Contact form | AJAX `POST` to Formsubmit (`https://formsubmit.co/ajax/hello@sonjaspeicher-custodia.com`); subject hard-coded to `Kontaktformular - sonjaspeicher-custodia.com`; reply-to = submitter's email field. Forwards via Porkbun alias → Sonja's GMX. Inline success/error UI (no redirect). |
 | Hosting | GitHub Pages, deploy on push to `main` (Actions builds `./dist` → `production` branch) |
 | Rechtsform | Autónoma — Sonja persönlich, NIE X8224719B, Polígono 5 Parcela 263, 07529 Ariany |
 
@@ -62,6 +62,15 @@ Tracked in the Businessplan v0.6 (Anytype). Highlights: Berufshaftpflicht prüfe
 ---
 
 ## Changelog (reverse chrono)
+
+### 2026-04-27 — Contact form backend via Formsubmit
+- Replaced `mailto:` handler with AJAX `POST` to `https://formsubmit.co/ajax/hello@sonjaspeicher-custodia.com`. No backend, no account — Formsubmit verifies the destination once via confirmation email, then forwards every submission as an email.
+- Subject is hard-coded to `Kontaktformular - sonjaspeicher-custodia.com` across all 4 languages (Sonja can filter by subject in GMX). `_template: "table"` formats the message body. Reply-To defaults to the form's `email` field, so Sonja can reply to a submitter directly from GMX.
+- Honeypot field `_honey` for bot protection. Loading / success / error states render inline (no page redirect); submit button disables while in flight; form resets on success.
+- `subjectPrefix` is no longer name-suffixed (was `…via sonjaspeicher-custodia.com – Max`).
+- Datenschutz copy in DE/EN/FR/ES updated: now discloses Formsubmit as a third-party processor with US-based servers, references Art. 46 GDPR safeguards, and states data is processed solely for delivery. The earlier "no third-party transmission" wording is removed.
+- All visible email addresses on the site (contact section, Impressum, Datenschutz) consolidated to `hello@sonjaspeicher-custodia.com` (matching the canonical domain). The `sonjaspeicher.com` and `custodia-mallorca.com` aliases still forward to the same GMX inbox.
+- **Activation step required:** first submission triggers a Formsubmit confirmation email to `hello@sonjaspeicher-custodia.com` → forwards to Sonja's GMX. She must click the confirmation link before the form goes live.
 
 ### 2026-04-27 — Eindrücke #1 swap + "Eigenes" capitalization
 - Replaced first Eindrücke image: `IMG_1843.jpeg` → `20260426_100811.jpg` (wisteria-pergola dining shot). Image needed 90° CCW rotation + EXIF orientation strip (sips left orientation=6 which made browsers un-rotate).

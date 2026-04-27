@@ -31,6 +31,7 @@ function AppContent() {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const [navProgress, setNavProgress] = useState(0);
   const [legalRoute, setLegalRoute] = useState<'impressum' | 'datenschutz' | null>(getLegalRoute());
+  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const { t, currentLanguage } = useLanguage();
 
   useEffect(() => {
@@ -564,7 +565,7 @@ function AppContent() {
                   </div>
                   <div>
                     <p className="text-sm text-[#6B6B6B]">{t('contact.email')}</p>
-                    <p className="text-[#1A1A1A]">hello@sonjaspeicher.com</p>
+                    <p className="text-[#1A1A1A]">hello@sonjaspeicher-custodia.com</p>
                   </div>
                 </div>
 
@@ -590,31 +591,46 @@ function AppContent() {
             <div className="contact-reveal bg-white rounded-lg p-8 shadow-sm">
               <form
                 className="space-y-6"
-                onSubmit={(e) => {
+                onSubmit={async (e) => {
                   e.preventDefault();
-                  const fd = new FormData(e.currentTarget);
-                  const name = (fd.get('name') as string) || '';
-                  const email = (fd.get('email') as string) || '';
-                  const phone = (fd.get('phone') as string) || '';
-                  const message = (fd.get('message') as string) || '';
-                  const subject = `${t('contact.form.subjectPrefix')}${name ? ' – ' + name : ''}`;
-                  const body =
-                    `${t('contact.form.name')}: ${name}\n` +
-                    `${t('contact.form.email')}: ${email}\n` +
-                    `${t('contact.form.phone')}: ${phone}\n\n` +
-                    `${message}`;
-                  window.location.href =
-                    `mailto:hello@sonjaspeicher.com?subject=${encodeURIComponent(subject)}` +
-                    `&body=${encodeURIComponent(body)}`;
+                  if (formStatus === 'submitting') return;
+                  const formEl = e.currentTarget;
+                  const fd = new FormData(formEl);
+                  if ((fd.get('_honey') as string)?.length) return;
+                  fd.set('_subject', t('contact.form.subjectPrefix') as string);
+                  fd.set('_template', 'table');
+                  fd.set('_captcha', 'false');
+                  setFormStatus('submitting');
+                  try {
+                    const res = await fetch(
+                      'https://formsubmit.co/ajax/hello@sonjaspeicher-custodia.com',
+                      {
+                        method: 'POST',
+                        headers: { Accept: 'application/json' },
+                        body: fd,
+                      }
+                    );
+                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                    const data = await res.json();
+                    if (data?.success === 'true' || data?.success === true) {
+                      setFormStatus('success');
+                      formEl.reset();
+                    } else {
+                      throw new Error(data?.message || 'Unknown error');
+                    }
+                  } catch {
+                    setFormStatus('error');
+                  }
                 }}
               >
+                <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
                 <div>
                   <label className="block text-sm text-[#6B6B6B] mb-2">{t('contact.form.name')}</label>
-                  <input name="name" type="text" placeholder={t('contact.form.namePlaceholder') as string} />
+                  <input name="name" type="text" required placeholder={t('contact.form.namePlaceholder') as string} />
                 </div>
                 <div>
                   <label className="block text-sm text-[#6B6B6B] mb-2">{t('contact.form.email')}</label>
-                  <input name="email" type="email" placeholder={t('contact.form.emailPlaceholder') as string} />
+                  <input name="email" type="email" required placeholder={t('contact.form.emailPlaceholder') as string} />
                 </div>
                 <div>
                   <label className="block text-sm text-[#6B6B6B] mb-2">{t('contact.form.phone')}</label>
@@ -622,11 +638,27 @@ function AppContent() {
                 </div>
                 <div>
                   <label className="block text-sm text-[#6B6B6B] mb-2">{t('contact.form.message')}</label>
-                  <textarea name="message" rows={4} placeholder={t('contact.form.messagePlaceholder') as string} />
+                  <textarea name="message" rows={4} required placeholder={t('contact.form.messagePlaceholder') as string} />
                 </div>
-                <button type="submit" className="btn-primary w-full">
-                  {t('contact.form.submit')}
+                <button
+                  type="submit"
+                  className="btn-primary w-full disabled:opacity-60 disabled:cursor-not-allowed"
+                  disabled={formStatus === 'submitting'}
+                >
+                  {formStatus === 'submitting'
+                    ? (t('contact.form.submitting') as string)
+                    : (t('contact.form.submit') as string)}
                 </button>
+                {formStatus === 'success' && (
+                  <p className="text-sm text-[#1A1A1A] bg-[#F0EBE3] border border-[#C4A77D]/40 rounded px-4 py-3">
+                    {t('contact.form.successMessage')}
+                  </p>
+                )}
+                {formStatus === 'error' && (
+                  <p className="text-sm text-[#8B2B2B] bg-[#FBEAEA] border border-[#8B2B2B]/30 rounded px-4 py-3">
+                    {t('contact.form.errorMessage')}
+                  </p>
+                )}
               </form>
             </div>
           </div>
