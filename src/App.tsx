@@ -512,7 +512,7 @@ function AppContent() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="impression-img">
               <img
-                src="/images/IMG_1843.jpeg"
+                src="/images/20260426_100811.jpg"
                 alt="Terrace at sunset"
                 className="w-full h-80 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
               />

@@ -165,7 +165,7 @@ export const translations: Record<Language, Translations> = {
       title: 'Über Sonja',
       paragraph1: '25 Jahre als Köchin und Chief Stewardess auf Luxusyachten. Über 15 Jahre auf Mallorca zuhause — mit eigener Finca, deren Bau sie drei Jahre lang persönlich mit ihrem Mann betreut hat.',
       paragraph2: 'Sonja versteht instinktiv, was anspruchsvolle Menschen erwarten. Vertrauenswürdigkeit, Vorausdenken, klare Lösungen. Dieses Serviceverständnis ist nicht antrainiert, es ist Berufsidentität.',
-      quote: 'Ich kümmere mich um wenige Anwesen — dafür um jedes wie um mein eigenes.',
+      quote: 'Ich kümmere mich um wenige Anwesen — dafür um jedes wie um mein Eigenes.',
       signature: '— Sonja Speicher',
     },
     impressions: {
