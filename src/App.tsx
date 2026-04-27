@@ -16,14 +16,32 @@ import {
 import './App.css';
 import { LanguageProvider, useLanguage } from './i18n/LanguageContext';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
+import { LegalPage } from './components/LegalPage';
 
 gsap.registerPlugin(ScrollTrigger);
+
+function getLegalRoute(): 'impressum' | 'datenschutz' | null {
+  const hash = window.location.hash.replace(/^#/, '').toLowerCase();
+  if (hash === 'impressum' || hash === 'datenschutz') return hash;
+  return null;
+}
 
 function AppContent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isNavVisible, setIsNavVisible] = useState(false);
   const [navProgress, setNavProgress] = useState(0);
+  const [legalRoute, setLegalRoute] = useState<'impressum' | 'datenschutz' | null>(getLegalRoute());
   const { t, currentLanguage } = useLanguage();
+
+  useEffect(() => {
+    const onHashChange = () => setLegalRoute(getLegalRoute());
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
+  if (legalRoute) {
+    return <LegalPage type={legalRoute} />;
+  }
   
   const heroRef = useRef<HTMLDivElement>(null);
   const philosophyRef = useRef<HTMLDivElement>(null);
@@ -570,22 +588,41 @@ function AppContent() {
             </div>
 
             <div className="contact-reveal bg-white rounded-lg p-8 shadow-sm">
-              <form className="space-y-6">
+              <form
+                className="space-y-6"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const fd = new FormData(e.currentTarget);
+                  const name = (fd.get('name') as string) || '';
+                  const email = (fd.get('email') as string) || '';
+                  const phone = (fd.get('phone') as string) || '';
+                  const message = (fd.get('message') as string) || '';
+                  const subject = `${t('contact.form.subjectPrefix')}${name ? ' – ' + name : ''}`;
+                  const body =
+                    `${t('contact.form.name')}: ${name}\n` +
+                    `${t('contact.form.email')}: ${email}\n` +
+                    `${t('contact.form.phone')}: ${phone}\n\n` +
+                    `${message}`;
+                  window.location.href =
+                    `mailto:hello@sonjaspeicher.com?subject=${encodeURIComponent(subject)}` +
+                    `&body=${encodeURIComponent(body)}`;
+                }}
+              >
                 <div>
                   <label className="block text-sm text-[#6B6B6B] mb-2">{t('contact.form.name')}</label>
-                  <input type="text" placeholder={t('contact.form.namePlaceholder') as string} />
+                  <input name="name" type="text" placeholder={t('contact.form.namePlaceholder') as string} />
                 </div>
                 <div>
                   <label className="block text-sm text-[#6B6B6B] mb-2">{t('contact.form.email')}</label>
-                  <input type="email" placeholder={t('contact.form.emailPlaceholder') as string} />
+                  <input name="email" type="email" placeholder={t('contact.form.emailPlaceholder') as string} />
                 </div>
                 <div>
                   <label className="block text-sm text-[#6B6B6B] mb-2">{t('contact.form.phone')}</label>
-                  <input type="tel" placeholder={t('contact.form.phonePlaceholder') as string} />
+                  <input name="phone" type="tel" placeholder={t('contact.form.phonePlaceholder') as string} />
                 </div>
                 <div>
                   <label className="block text-sm text-[#6B6B6B] mb-2">{t('contact.form.message')}</label>
-                  <textarea rows={4} placeholder={t('contact.form.messagePlaceholder') as string} />
+                  <textarea name="message" rows={4} placeholder={t('contact.form.messagePlaceholder') as string} />
                 </div>
                 <button type="submit" className="btn-primary w-full">
                   {t('contact.form.submit')}
@@ -607,10 +644,10 @@ function AppContent() {
               </p>
             </div>
             <div className="flex gap-6 text-sm text-white/60">
-              <a href="#" className="hover:text-[#C4A77D] transition-colors">
+              <a href="#impressum" className="hover:text-[#C4A77D] transition-colors">
                 {t('footer.imprint')}
               </a>
-              <a href="#" className="hover:text-[#C4A77D] transition-colors">
+              <a href="#datenschutz" className="hover:text-[#C4A77D] transition-colors">
                 {t('footer.privacy')}
               </a>
             </div>
