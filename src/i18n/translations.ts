@@ -154,8 +154,8 @@ export const translations: Record<Language, Translations> = {
     about: {
       title: 'Über Sonja',
       paragraph1: '25 Jahre als Chief Stewardess auf Luxusyachten. Über 15 Jahre auf Mallorca zuhause — mit eigener Finca, die sie drei Jahre lang persönlich gebaut hat.',
-      paragraph2: 'Sonja versteht instinktiv, was anspruchsvolle Menschen erwarten. Diskretion, Proaktivität, keine Ausreden. Dieses Serviceverständnis ist nicht antrainiert — es ist Berufsidentität.',
-      quote: 'Ich betreue maximal fünf Anwesen. Das ist kein Marketing-Slogan — das ist die einzige Art, wie ich arbeiten möchte.',
+      paragraph2: 'Sonja versteht instinktiv, was anspruchsvolle Menschen erwarten. Vertrauenswürdigkeit, Vorausdenken, klare Lösungen statt Ausflüchte. Dieses Serviceverständnis ist nicht antrainiert, es ist Berufsidentität.',
+      quote: 'Ich kümmere mich um wenige Anwesen — dafür um jedes wie um mein eigenes.',
       signature: '— Sonja Speicher',
     },
     impressions: {
@@ -254,8 +254,8 @@ export const translations: Record<Language, Translations> = {
     about: {
       title: 'About Sonja',
       paragraph1: '25 years as Chief Stewardess on luxury yachts. Over 15 years at home in Mallorca — with her own Finca, which she personally built over three years.',
-      paragraph2: 'Sonja instinctively understands what demanding people expect. Discretion, proactivity, no excuses. This service mindset is not trained — it is professional identity.',
-      quote: 'I care for a maximum of five properties. This is not a marketing slogan — this is the only way I want to work.',
+      paragraph2: 'Sonja instinctively understands what demanding people expect. Trustworthiness, foresight, clear solutions instead of excuses. This service mindset is not trained, it is professional identity.',
+      quote: 'I care for only a few properties — but for each one as if it were my own.',
       signature: '— Sonja Speicher',
     },
     impressions: {
@@ -354,8 +354,8 @@ export const translations: Record<Language, Translations> = {
     about: {
       title: 'À propos de Sonja',
       paragraph1: '25 ans comme Chief Stewardess sur des yachts de luxe. Plus de 15 ans à domicile à Majorque — avec sa propre Finca, qu\'elle a construite personnellement pendant trois ans.',
-      paragraph2: 'Sonja comprend instinctivement ce que les gens exigeants attendent. Discrétion, proactivité, pas d\'excuses. Cette mentalité de service n\'est pas entraînée — c\'est l\'identité professionnelle.',
-      quote: 'Je prends soin d\'un maximum de cinq propriétés. Ce n\'est pas un slogan marketing — c\'est la seule façon dont je veux travailler.',
+      paragraph2: 'Sonja comprend instinctivement ce que les gens exigeants attendent. Fiabilité, anticipation, des solutions claires plutôt que des excuses. Cette mentalité de service n\'est pas entraînée, c\'est l\'identité professionnelle.',
+      quote: 'Je m\'occupe de peu de propriétés — mais de chacune comme s\'il s\'agissait de la mienne.',
       signature: '— Sonja Speicher',
     },
     impressions: {
@@ -454,8 +454,8 @@ export const translations: Record<Language, Translations> = {
     about: {
       title: 'Sobre Sonja',
       paragraph1: '25 años como Chief Stewardess en yates de lujo. Más de 15 años en casa en Mallorca — con su propia Finca, que construyó personalmente durante tres años.',
-      paragraph2: 'Sonja entiende instintivamente lo que las personas exigentes esperan. Discreción, proactividad, sin excusas. Esta mentalidad de servicio no está entrenada — es identidad profesional.',
-      quote: 'Atiendo un máximo de cinco propiedades. No es un eslogan de marketing — es la única forma en que quiero trabajar.',
+      paragraph2: 'Sonja entiende instintivamente lo que las personas exigentes esperan. Confiabilidad, previsión, soluciones claras en lugar de excusas. Esta mentalidad de servicio no está entrenada, es identidad profesional.',
+      quote: 'Cuido de pocas propiedades — pero de cada una como si fuera la mía.',
       signature: '— Sonja Speicher',
     },
     impressions: {
