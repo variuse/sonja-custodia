@@ -77,6 +77,7 @@ export interface Translations {
       message: string;
       messagePlaceholder: string;
       submit: string;
+      subjectPrefix: string;
     };
   };
   // Footer
@@ -85,6 +86,19 @@ export interface Translations {
     imprint: string;
     privacy: string;
     copyright: string;
+  };
+  // Legal pages (Aviso Legal + GDPR Privacy Policy)
+  legal: {
+    back: string;
+    lastUpdated: string;
+    impressum: {
+      title: string;
+      sections: { heading: string; body: string }[];
+    };
+    datenschutz: {
+      title: string;
+      sections: { heading: string; body: string }[];
+    };
   };
 }
 
@@ -176,6 +190,7 @@ export const translations: Record<Language, Translations> = {
         message: 'Nachricht',
         messagePlaceholder: 'Erzählen Sie mir von Ihrem Anwesen...',
         submit: 'Nachricht senden',
+        subjectPrefix: 'Anfrage über sonjaspeicher-custodia.com',
       },
     },
     footer: {
@@ -183,6 +198,68 @@ export const translations: Record<Language, Translations> = {
       imprint: 'Impressum',
       privacy: 'Datenschutz',
       copyright: '© 2026 Sonja Speicher. Alle Rechte vorbehalten.',
+    },
+    legal: {
+      back: 'Zurück zur Startseite',
+      lastUpdated: 'Stand: April 2026',
+      impressum: {
+        title: 'Impressum',
+        sections: [
+          {
+            heading: 'Anbieter',
+            body: 'Sonja Speicher\nPolígono 5 Parcela 263\n07529 Ariany\nIlles Balears, España\n\nNIE: X8224719B\nRechtsform: Autónoma (selbständig erwerbstätig nach spanischem Recht)',
+          },
+          {
+            heading: 'Kontakt',
+            body: 'Telefon: +34 653 545 612\nE-Mail: hello@sonjaspeicher.com',
+          },
+          {
+            heading: 'Hosting',
+            body: 'Diese Website wird gehostet durch GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA, über GitHub Pages.',
+          },
+          {
+            heading: 'Anwendbares Recht und Haftung',
+            body: 'Die Bereitstellung dieser Website erfolgt nach den Bestimmungen der spanischen Ley 34/2002 (LSSI-CE). Für die Verarbeitung personenbezogener Daten gilt zusätzlich die Verordnung (EU) 2016/679 (DSGVO).\n\nDie Inhalte werden mit größter Sorgfalt erstellt; für Richtigkeit, Vollständigkeit und Aktualität wird jedoch keine Gewähr übernommen. Für externe Links sind ausschließlich deren Betreiber verantwortlich.',
+          },
+          {
+            heading: 'Online-Streitbeilegung',
+            body: 'Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit: https://ec.europa.eu/consumers/odr. Sonja Speicher ist nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.',
+          },
+        ],
+      },
+      datenschutz: {
+        title: 'Datenschutzerklärung',
+        sections: [
+          {
+            heading: 'Verantwortliche Stelle',
+            body: 'Sonja Speicher\nPolígono 5 Parcela 263\n07529 Ariany\nIlles Balears, España\n\nE-Mail: hello@sonjaspeicher.com',
+          },
+          {
+            heading: 'Übersicht',
+            body: 'Diese Website verarbeitet personenbezogene Daten nur dann, wenn Sie aktiv Kontakt aufnehmen. Es werden keine Cookies gesetzt, kein Tracking und keine Analyse-Tools eingesetzt.',
+          },
+          {
+            heading: 'Datenverarbeitung beim Aufruf der Website',
+            body: 'Beim Aufruf dieser Website werden technische Verbindungsdaten (IP-Adresse, Datum und Uhrzeit, abgerufene Ressource, Referrer) durch den Hosting-Anbieter GitHub, Inc. zur technischen Auslieferung verarbeitet. Eine eigenständige Speicherung oder Auswertung durch Sonja Speicher findet nicht statt.',
+          },
+          {
+            heading: 'Kontaktformular',
+            body: 'Das Kontaktformular dieser Website öffnet beim Absenden Ihr lokales E-Mail-Programm und überträgt die Eingaben als E-Mail an hello@sonjaspeicher.com. Es findet keine serverseitige Speicherung oder Übermittlung über Dritte statt.\n\nDie Verarbeitung Ihrer per E-Mail übermittelten Daten erfolgt ausschließlich zur Beantwortung Ihrer Anfrage und zur Anbahnung einer möglichen Geschäftsbeziehung (Art. 6 Abs. 1 lit. b DSGVO). Die Daten werden gelöscht, sobald sie für den Zweck nicht mehr erforderlich sind — spätestens nach Abschluss eines etwaigen Vertrages zuzüglich gesetzlicher Aufbewahrungsfristen.',
+          },
+          {
+            heading: 'Cookies und Tracking',
+            body: 'Diese Website verwendet keine Cookies und kein Web-Tracking.',
+          },
+          {
+            heading: 'Ihre Rechte',
+            body: 'Nach DSGVO haben Sie das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21).\n\nSie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig in Spanien ist die Agencia Española de Protección de Datos (AEPD), https://www.aepd.es.',
+          },
+          {
+            heading: 'Kontakt für Datenschutzanfragen',
+            body: 'Bitte richten Sie alle Anfragen zu Ihren Daten an: hello@sonjaspeicher.com.',
+          },
+        ],
+      },
     },
   },
   en: {
@@ -272,6 +349,7 @@ export const translations: Record<Language, Translations> = {
         message: 'Message',
         messagePlaceholder: 'Tell me about your property...',
         submit: 'Send message',
+        subjectPrefix: 'Inquiry via sonjaspeicher-custodia.com',
       },
     },
     footer: {
@@ -279,6 +357,68 @@ export const translations: Record<Language, Translations> = {
       imprint: 'Imprint',
       privacy: 'Privacy Policy',
       copyright: '© 2026 Sonja Speicher. All rights reserved.',
+    },
+    legal: {
+      back: 'Back to homepage',
+      lastUpdated: 'As of April 2026',
+      impressum: {
+        title: 'Legal Notice',
+        sections: [
+          {
+            heading: 'Provider',
+            body: 'Sonja Speicher\nPolígono 5 Parcela 263\n07529 Ariany\nIlles Balears, Spain\n\nNIE: X8224719B\nLegal status: Autónoma (self-employed under Spanish law)',
+          },
+          {
+            heading: 'Contact',
+            body: 'Phone: +34 653 545 612\nEmail: hello@sonjaspeicher.com',
+          },
+          {
+            heading: 'Hosting',
+            body: 'This website is hosted by GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA, via GitHub Pages.',
+          },
+          {
+            heading: 'Applicable Law and Liability',
+            body: 'This website is provided in accordance with Spanish Law 34/2002 (LSSI-CE). The processing of personal data is additionally governed by Regulation (EU) 2016/679 (GDPR).\n\nThe contents are prepared with the greatest care; however, no warranty is given as to their accuracy, completeness or timeliness. For external links, the respective operators are solely responsible.',
+          },
+          {
+            heading: 'Online Dispute Resolution',
+            body: 'The European Commission provides an online dispute resolution platform: https://ec.europa.eu/consumers/odr. Sonja Speicher is not obliged and not willing to participate in dispute resolution proceedings before a consumer arbitration board.',
+          },
+        ],
+      },
+      datenschutz: {
+        title: 'Privacy Policy',
+        sections: [
+          {
+            heading: 'Data Controller',
+            body: 'Sonja Speicher\nPolígono 5 Parcela 263\n07529 Ariany\nIlles Balears, Spain\n\nEmail: hello@sonjaspeicher.com',
+          },
+          {
+            heading: 'Overview',
+            body: 'This website processes personal data only when you actively make contact. No cookies are set, and no tracking or analytics tools are used.',
+          },
+          {
+            heading: 'Data Processing on Website Access',
+            body: 'When you access this website, technical connection data (IP address, date and time, requested resource, referrer) is processed by the hosting provider GitHub, Inc. for the sole purpose of technical delivery. No independent storage or analysis is carried out by Sonja Speicher.',
+          },
+          {
+            heading: 'Contact Form',
+            body: 'The contact form on this website opens your local email program when submitted and transmits the entries as an email to hello@sonjaspeicher.com. No server-side storage or transmission via third parties takes place.\n\nThe processing of your data submitted by email is carried out exclusively for the purpose of responding to your inquiry and initiating a possible business relationship (Art. 6(1)(b) GDPR). The data will be deleted as soon as it is no longer required for that purpose — at the latest after the conclusion of any contract plus statutory retention periods.',
+          },
+          {
+            heading: 'Cookies and Tracking',
+            body: 'This website does not use cookies or web tracking.',
+          },
+          {
+            heading: 'Your Rights',
+            body: 'Under the GDPR, you have the right to access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and objection (Art. 21).\n\nYou also have the right to lodge a complaint with a data protection supervisory authority. The competent Spanish authority is the Agencia Española de Protección de Datos (AEPD), https://www.aepd.es.',
+          },
+          {
+            heading: 'Contact for Privacy Inquiries',
+            body: 'Please direct any inquiries regarding your data to: hello@sonjaspeicher.com.',
+          },
+        ],
+      },
     },
   },
   fr: {
@@ -368,6 +508,7 @@ export const translations: Record<Language, Translations> = {
         message: 'Message',
         messagePlaceholder: 'Parlez-moi de votre propriété...',
         submit: 'Envoyer le message',
+        subjectPrefix: 'Demande via sonjaspeicher-custodia.com',
       },
     },
     footer: {
@@ -375,6 +516,68 @@ export const translations: Record<Language, Translations> = {
       imprint: 'Mentions légales',
       privacy: 'Politique de confidentialité',
       copyright: '© 2026 Sonja Speicher. Tous droits réservés.',
+    },
+    legal: {
+      back: 'Retour à l\'accueil',
+      lastUpdated: 'Mise à jour : avril 2026',
+      impressum: {
+        title: 'Mentions légales',
+        sections: [
+          {
+            heading: 'Prestataire',
+            body: 'Sonja Speicher\nPolígono 5 Parcela 263\n07529 Ariany\nIlles Balears, Espagne\n\nNIE : X8224719B\nForme juridique : Autónoma (travailleur indépendant en droit espagnol)',
+          },
+          {
+            heading: 'Contact',
+            body: 'Téléphone : +34 653 545 612\nE-mail : hello@sonjaspeicher.com',
+          },
+          {
+            heading: 'Hébergement',
+            body: 'Ce site est hébergé par GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis, via GitHub Pages.',
+          },
+          {
+            heading: 'Droit applicable et responsabilité',
+            body: 'La mise à disposition de ce site est régie par la loi espagnole 34/2002 (LSSI-CE). Le traitement des données à caractère personnel est en outre soumis au Règlement (UE) 2016/679 (RGPD).\n\nLes contenus sont rédigés avec le plus grand soin ; toutefois, aucune garantie n\'est donnée quant à leur exactitude, leur exhaustivité ou leur actualité. Les exploitants des sites externes liés sont seuls responsables de leurs contenus.',
+          },
+          {
+            heading: 'Règlement en ligne des litiges',
+            body: 'La Commission européenne met à disposition une plateforme de règlement en ligne des litiges : https://ec.europa.eu/consumers/odr. Sonja Speicher n\'est pas tenue et ne souhaite pas participer à une procédure de règlement des litiges devant une instance d\'arbitrage de consommation.',
+          },
+        ],
+      },
+      datenschutz: {
+        title: 'Politique de confidentialité',
+        sections: [
+          {
+            heading: 'Responsable du traitement',
+            body: 'Sonja Speicher\nPolígono 5 Parcela 263\n07529 Ariany\nIlles Balears, Espagne\n\nE-mail : hello@sonjaspeicher.com',
+          },
+          {
+            heading: 'Aperçu',
+            body: 'Ce site ne traite des données personnelles que lorsque vous prenez activement contact. Aucun cookie n\'est utilisé, aucun outil de suivi ni d\'analyse n\'est mis en œuvre.',
+          },
+          {
+            heading: 'Traitement des données lors de la consultation du site',
+            body: 'Lors de la consultation de ce site, des données techniques de connexion (adresse IP, date et heure, ressource consultée, référent) sont traitées par l\'hébergeur GitHub, Inc. aux seules fins de livraison technique. Aucune conservation ni exploitation indépendante n\'est effectuée par Sonja Speicher.',
+          },
+          {
+            heading: 'Formulaire de contact',
+            body: 'Le formulaire de contact ouvre votre logiciel de messagerie local au moment de l\'envoi et transmet les saisies sous forme d\'e-mail à hello@sonjaspeicher.com. Aucun stockage côté serveur ni transmission par un tiers n\'a lieu.\n\nLe traitement de vos données transmises par e-mail est effectué exclusivement pour répondre à votre demande et préparer une éventuelle relation commerciale (art. 6 §1 b RGPD). Les données seront supprimées dès qu\'elles ne seront plus nécessaires à cette fin — au plus tard à l\'issue d\'un éventuel contrat, augmentés des durées de conservation légales.',
+          },
+          {
+            heading: 'Cookies et suivi',
+            body: 'Ce site n\'utilise ni cookies ni dispositif de suivi.',
+          },
+          {
+            heading: 'Vos droits',
+            body: 'Au titre du RGPD, vous disposez d\'un droit d\'accès (art. 15), de rectification (art. 16), d\'effacement (art. 17), de limitation du traitement (art. 18), de portabilité (art. 20) et d\'opposition (art. 21).\n\nVous avez en outre le droit d\'introduire une réclamation auprès d\'une autorité de contrôle. L\'autorité espagnole compétente est l\'Agencia Española de Protección de Datos (AEPD), https://www.aepd.es.',
+          },
+          {
+            heading: 'Contact pour les demandes relatives à vos données',
+            body: 'Veuillez adresser toute demande concernant vos données à : hello@sonjaspeicher.com.',
+          },
+        ],
+      },
     },
   },
   es: {
@@ -464,6 +667,7 @@ export const translations: Record<Language, Translations> = {
         message: 'Mensaje',
         messagePlaceholder: 'Cuéntame sobre tu propiedad...',
         submit: 'Enviar mensaje',
+        subjectPrefix: 'Consulta vía sonjaspeicher-custodia.com',
       },
     },
     footer: {
@@ -471,6 +675,68 @@ export const translations: Record<Language, Translations> = {
       imprint: 'Aviso legal',
       privacy: 'Política de privacidad',
       copyright: '© 2026 Sonja Speicher. Todos los derechos reservados.',
+    },
+    legal: {
+      back: 'Volver al inicio',
+      lastUpdated: 'Actualizado: abril de 2026',
+      impressum: {
+        title: 'Aviso legal',
+        sections: [
+          {
+            heading: 'Titular',
+            body: 'Sonja Speicher\nPolígono 5 Parcela 263\n07529 Ariany\nIlles Balears, España\n\nNIE: X8224719B\nForma jurídica: Autónoma',
+          },
+          {
+            heading: 'Contacto',
+            body: 'Teléfono: +34 653 545 612\nCorreo electrónico: hello@sonjaspeicher.com',
+          },
+          {
+            heading: 'Alojamiento',
+            body: 'Este sitio web está alojado por GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, EE. UU., a través de GitHub Pages.',
+          },
+          {
+            heading: 'Legislación aplicable y responsabilidad',
+            body: 'La prestación de este sitio web se rige por la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE). El tratamiento de datos personales se rige adicionalmente por el Reglamento (UE) 2016/679 (RGPD).\n\nLos contenidos se elaboran con el máximo cuidado; no obstante, no se ofrece garantía alguna sobre su exactitud, integridad o actualidad. De los enlaces externos solo son responsables sus respectivos operadores.',
+          },
+          {
+            heading: 'Resolución de litigios en línea',
+            body: 'La Comisión Europea pone a disposición una plataforma de resolución de litigios en línea: https://ec.europa.eu/consumers/odr. Sonja Speicher no está obligada ni dispuesta a participar en un procedimiento de resolución de litigios ante un órgano arbitral de consumo.',
+          },
+        ],
+      },
+      datenschutz: {
+        title: 'Política de privacidad',
+        sections: [
+          {
+            heading: 'Responsable del tratamiento',
+            body: 'Sonja Speicher\nPolígono 5 Parcela 263\n07529 Ariany\nIlles Balears, España\n\nCorreo electrónico: hello@sonjaspeicher.com',
+          },
+          {
+            heading: 'Resumen',
+            body: 'Este sitio web solo trata datos personales cuando usted establece contacto activamente. No se utilizan cookies, ni herramientas de seguimiento o análisis.',
+          },
+          {
+            heading: 'Tratamiento de datos al acceder al sitio',
+            body: 'Al acceder a este sitio, el proveedor de alojamiento GitHub, Inc. trata datos técnicos de conexión (dirección IP, fecha y hora, recurso solicitado, referente) con la única finalidad de la entrega técnica. Sonja Speicher no realiza un almacenamiento o análisis independiente.',
+          },
+          {
+            heading: 'Formulario de contacto',
+            body: 'El formulario de contacto de este sitio abre su programa local de correo al enviarlo y transmite las entradas como correo electrónico a hello@sonjaspeicher.com. No se produce almacenamiento en servidor ni transmisión a terceros.\n\nEl tratamiento de los datos enviados por correo electrónico se realiza exclusivamente para responder a su consulta y preparar una posible relación comercial (art. 6.1.b RGPD). Los datos se eliminan en cuanto dejan de ser necesarios para dicha finalidad — a más tardar tras la conclusión de un eventual contrato, más los plazos legales de conservación.',
+          },
+          {
+            heading: 'Cookies y seguimiento',
+            body: 'Este sitio web no utiliza cookies ni seguimiento web.',
+          },
+          {
+            heading: 'Sus derechos',
+            body: 'Conforme al RGPD, usted tiene derecho de acceso (art. 15), rectificación (art. 16), supresión (art. 17), limitación del tratamiento (art. 18), portabilidad (art. 20) y oposición (art. 21).\n\nAsimismo, tiene derecho a presentar una reclamación ante una autoridad de control. La autoridad española competente es la Agencia Española de Protección de Datos (AEPD), https://www.aepd.es.',
+          },
+          {
+            heading: 'Contacto para consultas sobre datos',
+            body: 'Dirija cualquier consulta sobre sus datos a: hello@sonjaspeicher.com.',
+          },
+        ],
+      },
     },
   },
 };
