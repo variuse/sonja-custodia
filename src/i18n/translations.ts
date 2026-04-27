@@ -102,7 +102,7 @@ export const translations: Record<Language, Translations> = {
     },
     philosophy: {
       headline: 'Nicht ein weiterer Hausmeister-Service',
-      body: 'Sonja ist die Vertrauensperson, die die Sprache ihrer Klienten spricht — buchstäblich und kulturell. 25 Jahre Luxus-Yachting haben ihr ein instinktives Verständnis dafür gegeben, was anspruchsvolle Eigentümer erwarten: Diskretion, Proaktivität, keine Ausreden. Das ist Custòdia.',
+      body: 'Sonja ist die Vertrauensperson, die die Sprache ihrer Klienten spricht — buchstäblich und kulturell. 25 Jahre Luxus-Yachting haben ihr ein instinktives Verständnis dafür gegeben, was anspruchsvolle Eigentümer erwarten: Diskretion, Proaktivität, Verlässlichkeit — und ein Ansprechpartner, der erreichbar ist, wenn es darauf ankommt. Das ist Custòdia.',
       languages: 'Sprachen',
       location: 'Inselmitte, Norden',
       locationLabel: '& Nordosten',
@@ -118,24 +118,20 @@ export const translations: Record<Language, Translations> = {
         title: 'CARE',
         subtitle: 'Regelmäßige Objektbetreuung',
         features: [
-          'Wöchentlicher Komplettcheck: Lüften, Wasser, Bewässerung, Sicherheit',
+          'Wöchentlicher Komplettcheck: Haus, Garten, Pool, Bewässerung, Sicherheit',
           'Fotodokumentation & wöchentlicher Kurzbericht',
           'Sofortmeldung bei Problemen inkl. Erstmaßnahmen',
-          'Koordination externer Dienstleister: Handwerker, Gärtner, Reinigung',
-          'Behördengänge & Terminvermittlung',
-          'Postkasten leeren, Pakete annehmen',
-          'Primärer Notfallkontakt für Versicherungen',
+          'Koordination externer Dienstleister: Handwerker, Gärtner, Reinigungspersonal',
+          'Briefkasten leeren, Pakete annehmen',
         ],
       },
       arrive: {
         title: 'ARRIVE',
         subtitle: 'Vorbereitung & Ankunfts-Service',
         features: [
-          'Einkaufsservice nach persönlicher Liste',
+          'Einkaufsservice nach Ihren persönlichen Wünschen',
           'Haus sorgfältig vorbereitet: frisch gelüftet, geputzt, frische Blumen',
           'Airport-Transfer Organisation',
-          'Schlüsselübergabe & Einweisung bei Erstkunden',
-          'Saisonale Vorbereitung: Öffnen/Schließen der Saison',
         ],
       },
       fullcare: {
@@ -153,9 +149,9 @@ export const translations: Record<Language, Translations> = {
     },
     about: {
       title: 'Über Sonja',
-      paragraph1: '25 Jahre als Chief Stewardess auf Luxusyachten. Über 15 Jahre auf Mallorca zuhause — mit eigener Finca, die sie drei Jahre lang persönlich gebaut hat.',
-      paragraph2: 'Sonja versteht instinktiv, was anspruchsvolle Menschen erwarten. Diskretion, Proaktivität, keine Ausreden. Dieses Serviceverständnis ist nicht antrainiert — es ist Berufsidentität.',
-      quote: 'Ich betreue maximal fünf Anwesen. Das ist kein Marketing-Slogan — das ist die einzige Art, wie ich arbeiten möchte.',
+      paragraph1: '25 Jahre als Köchin und Chief Stewardess auf Luxusyachten. Über 15 Jahre auf Mallorca zuhause — mit eigener Finca, deren Bau sie drei Jahre lang persönlich mit ihrem Mann betreut hat.',
+      paragraph2: 'Sonja versteht instinktiv, was anspruchsvolle Menschen erwarten. Vertrauenswürdigkeit, Vorausdenken, klare Lösungen. Dieses Serviceverständnis ist nicht antrainiert, es ist Berufsidentität.',
+      quote: 'Ich kümmere mich um wenige Anwesen — dafür um jedes wie um mein eigenes.',
       signature: '— Sonja Speicher',
     },
     impressions: {
@@ -202,7 +198,7 @@ export const translations: Record<Language, Translations> = {
     },
     philosophy: {
       headline: 'Not just another property management service',
-      body: 'Sonja is the trusted person who speaks her clients\' language — literally and culturally. 25 years in luxury yachting have given her an instinctive understanding of what discerning owners expect: discretion, proactivity, no excuses. That is Custòdia.',
+      body: 'Sonja is the trusted person who speaks her clients\' language — literally and culturally. 25 years in luxury yachting have given her an instinctive understanding of what discerning owners expect: discretion, proactivity, reliability — and a point of contact who is reachable when it matters. That is Custòdia.',
       languages: 'Languages',
       location: 'Central, North',
       locationLabel: '& Northeast',
@@ -218,24 +214,20 @@ export const translations: Record<Language, Translations> = {
         title: 'CARE',
         subtitle: 'Regular property care',
         features: [
-          'Weekly complete check: ventilation, water, irrigation, security',
+          'Weekly complete check: house, garden, pool, irrigation, security',
           'Photo documentation & weekly brief report',
           'Immediate notification of problems including initial measures',
-          'Coordination of external service providers: craftsmen, gardeners, cleaning',
-          'Official errands & appointment mediation',
+          'Coordination of external service providers: craftsmen, gardeners, cleaning staff',
           'Empty mailbox, accept packages',
-          'Primary emergency contact for insurance',
         ],
       },
       arrive: {
         title: 'ARRIVE',
         subtitle: 'Preparation & arrival service',
         features: [
-          'Shopping service according to personal list',
+          'Shopping service tailored to your personal preferences',
           'House carefully prepared: freshly ventilated, cleaned, fresh flowers',
           'Airport transfer organization',
-          'Key handover & briefing for first-time clients',
-          'Seasonal preparation: opening/closing the season',
         ],
       },
       fullcare: {
@@ -253,9 +245,9 @@ export const translations: Record<Language, Translations> = {
     },
     about: {
       title: 'About Sonja',
-      paragraph1: '25 years as Chief Stewardess on luxury yachts. Over 15 years at home in Mallorca — with her own Finca, which she personally built over three years.',
-      paragraph2: 'Sonja instinctively understands what demanding people expect. Discretion, proactivity, no excuses. This service mindset is not trained — it is professional identity.',
-      quote: 'I care for a maximum of five properties. This is not a marketing slogan — this is the only way I want to work.',
+      paragraph1: '25 years as cook and Chief Stewardess on luxury yachts. Over 15 years at home in Mallorca — with her own Finca, whose construction she personally oversaw together with her husband over three years.',
+      paragraph2: 'Sonja instinctively understands what demanding people expect. Trustworthiness, foresight, clear solutions. This service mindset is not trained, it is professional identity.',
+      quote: 'I care for only a few properties — but for each one as if it were my own.',
       signature: '— Sonja Speicher',
     },
     impressions: {
@@ -302,7 +294,7 @@ export const translations: Record<Language, Translations> = {
     },
     philosophy: {
       headline: 'Pas un autre service de gestion immobilière',
-      body: 'Sonja est la personne de confiance qui parle la langue de ses clients — littéralement et culturellement. 25 ans dans le yachting de luxe lui ont donné une compréhension instinctive de ce que les propriétaires exigeants attendent: discrétion, proactivité, pas d\'excuses. C\'est Custòdia.',
+      body: 'Sonja est la personne de confiance qui parle la langue de ses clients — littéralement et culturellement. 25 ans dans le yachting de luxe lui ont donné une compréhension instinctive de ce que les propriétaires exigeants attendent : discrétion, proactivité, fiabilité — et un interlocuteur joignable quand cela compte. C\'est Custòdia.',
       languages: 'Langues',
       location: 'Centre, Nord',
       locationLabel: '& Nord-Est',
@@ -318,24 +310,20 @@ export const translations: Record<Language, Translations> = {
         title: 'CARE',
         subtitle: 'Entretien régulier de la propriété',
         features: [
-          'Contrôle complet hebdomadaire: aération, eau, irrigation, sécurité',
+          'Contrôle complet hebdomadaire : maison, jardin, piscine, irrigation, sécurité',
           'Documentation photo & rapport hebdomadaire',
           'Notification immédiate des problèmes avec mesures initiales',
-          'Coordination des prestataires: artisans, jardiniers, nettoyage',
-          'Démarches administratives & médiation',
+          'Coordination des prestataires : artisans, jardiniers, personnel d\'entretien',
           'Vider la boîte aux lettres, accepter les colis',
-          'Contact d\'urgence principal pour les assurances',
         ],
       },
       arrive: {
         title: 'ARRIVE',
         subtitle: 'Préparation & service d\'arrivée',
         features: [
-          'Service de courses selon liste personnelle',
-          'Maison soigneusement préparée: aérée, nettoyée, fleurs fraîches',
+          'Service de courses selon vos souhaits personnels',
+          'Maison soigneusement préparée : aérée, nettoyée, fleurs fraîches',
           'Organisation du transfert aéroport',
-          'Remise des clés & briefing pour nouveaux clients',
-          'Préparation saisonnière: ouverture/fermeture de saison',
         ],
       },
       fullcare: {
@@ -353,9 +341,9 @@ export const translations: Record<Language, Translations> = {
     },
     about: {
       title: 'À propos de Sonja',
-      paragraph1: '25 ans comme Chief Stewardess sur des yachts de luxe. Plus de 15 ans à domicile à Majorque — avec sa propre Finca, qu\'elle a construite personnellement pendant trois ans.',
-      paragraph2: 'Sonja comprend instinctivement ce que les gens exigeants attendent. Discrétion, proactivité, pas d\'excuses. Cette mentalité de service n\'est pas entraînée — c\'est l\'identité professionnelle.',
-      quote: 'Je prends soin d\'un maximum de cinq propriétés. Ce n\'est pas un slogan marketing — c\'est la seule façon dont je veux travailler.',
+      paragraph1: '25 ans comme cuisinière et Chief Stewardess sur des yachts de luxe. Plus de 15 ans à domicile à Majorque — avec sa propre Finca, dont elle a personnellement supervisé la construction avec son mari pendant trois ans.',
+      paragraph2: 'Sonja comprend instinctivement ce que les gens exigeants attendent. Confiance, anticipation, des solutions claires. Cette mentalité de service n\'est pas entraînée, c\'est l\'identité professionnelle.',
+      quote: 'Je m\'occupe de peu de propriétés — mais de chacune comme s\'il s\'agissait de la mienne.',
       signature: '— Sonja Speicher',
     },
     impressions: {
@@ -402,7 +390,7 @@ export const translations: Record<Language, Translations> = {
     },
     philosophy: {
       headline: 'No es otro servicio de administración de propiedades',
-      body: 'Sonja es la persona de confianza que habla el idioma de sus clientes — literal y culturalmente. 25 años en yates de lujo le han dado una comprensión instintiva de lo que los propietarios exigentes esperan: discreción, proactividad, sin excusas. Eso es Custòdia.',
+      body: 'Sonja es la persona de confianza que habla el idioma de sus clientes — literal y culturalmente. 25 años en yates de lujo le han dado una comprensión instintiva de lo que los propietarios exigentes esperan: discreción, proactividad, fiabilidad — y un interlocutor accesible cuando importa. Eso es Custòdia.',
       languages: 'Idiomas',
       location: 'Centro, Norte',
       locationLabel: '& Noreste',
@@ -418,24 +406,20 @@ export const translations: Record<Language, Translations> = {
         title: 'CARE',
         subtitle: 'Cuidado regular de la propiedad',
         features: [
-          'Control completo semanal: ventilación, agua, riego, seguridad',
+          'Control completo semanal: casa, jardín, piscina, riego, seguridad',
           'Documentación fotográfica & informe semanal',
           'Notificación inmediata de problemas con medidas iniciales',
-          'Coordinación de proveedores: artesanos, jardineros, limpieza',
-          'Trámites oficiales & mediación de citas',
+          'Coordinación de proveedores: artesanos, jardineros, personal de limpieza',
           'Vaciar buzón, aceptar paquetes',
-          'Contacto de emergencia principal para seguros',
         ],
       },
       arrive: {
         title: 'ARRIVE',
         subtitle: 'Preparación & servicio de llegada',
         features: [
-          'Servicio de compras según lista personal',
+          'Servicio de compras según sus preferencias personales',
           'Casa cuidadosamente preparada: ventilada, limpia, flores frescas',
           'Organización de traslado al aeropuerto',
-          'Entrega de llaves & briefing para nuevos clientes',
-          'Preparación estacional: apertura/cierre de temporada',
         ],
       },
       fullcare: {
@@ -453,9 +437,9 @@ export const translations: Record<Language, Translations> = {
     },
     about: {
       title: 'Sobre Sonja',
-      paragraph1: '25 años como Chief Stewardess en yates de lujo. Más de 15 años en casa en Mallorca — con su propia Finca, que construyó personalmente durante tres años.',
-      paragraph2: 'Sonja entiende instintivamente lo que las personas exigentes esperan. Discreción, proactividad, sin excusas. Esta mentalidad de servicio no está entrenada — es identidad profesional.',
-      quote: 'Atiendo un máximo de cinco propiedades. No es un eslogan de marketing — es la única forma en que quiero trabajar.',
+      paragraph1: '25 años como cocinera y Chief Stewardess en yates de lujo. Más de 15 años en casa en Mallorca — con su propia Finca, cuya construcción supervisó personalmente con su marido durante tres años.',
+      paragraph2: 'Sonja entiende instintivamente lo que las personas exigentes esperan. Compromiso, previsión, soluciones claras. Esta mentalidad de servicio no está entrenada, es identidad profesional.',
+      quote: 'Cuido de pocas propiedades — pero de cada una como si fuera la mía.',
       signature: '— Sonja Speicher',
     },
     impressions: {

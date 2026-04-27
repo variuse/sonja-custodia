@@ -508,8 +508,8 @@ function AppContent() {
             </div>
             <div className="impression-img">
               <img
-                src="/images/20260426_094553_01.jpg"
-                alt="Pergola with wisteria and outdoor dining"
+                src="/images/20260403_083625.jpg"
+                alt="Citrus garden at the Finca"
                 className="w-full h-80 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
               />
             </div>
