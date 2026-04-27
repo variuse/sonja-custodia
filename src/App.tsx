@@ -39,10 +39,6 @@ function AppContent() {
     return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
 
-  if (legalRoute) {
-    return <LegalPage type={legalRoute} />;
-  }
-  
   const heroRef = useRef<HTMLDivElement>(null);
   const philosophyRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
@@ -207,6 +203,10 @@ function AppContent() {
   const careFeatures = t('services.care.features') as string[];
   const arriveFeatures = t('services.arrive.features') as string[];
   const fullcareFeatures = t('services.fullcare.features') as string[];
+
+  if (legalRoute) {
+    return <LegalPage type={legalRoute} />;
+  }
 
   return (
     <div className="min-h-screen bg-[#FAF8F5]">
