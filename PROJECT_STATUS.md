@@ -111,7 +111,8 @@ Space: **Sonja Speicher Custodia** · Space ID `bafyreifqsffrrujnvtxcoapcfedbx7d
 |:---|:---|:---|
 | 🌐 Website — Vorschau & Feedback (Sonja) | `bafyreifaslyu4mr3whtynzgnuqlmyxjf5zxfmwv47cnhndpah4xzwzurvy` | Section-by-section mirror of the live site, with `✏️ Feedback & Änderungen` fields where Sonja writes notes. **Read this when implementing her feedback.** |
 | 📄 Sonja Speicher · Custòdia (Businessplan) | `bafyreiekzjjkuqpxf5yac5ceoum4xupzpfujcxmiyxgobtcrqrytkec23i` | Canonical strategy doc (current: v0.6 · 2026-04-27). Holds the "why" behind positioning, pricing, packages, roadmap. Sections 4 (Leistungsportfolio) and 8 (Website-Konzept) cross-check against `translations.ts`. |
-| 🚀 Website Update — 27. April 2026 | `bafyreibbvdu5t2axkjfsapzytdiecr6t4m7smoqfovol3ztuketw6pjpnu` | Sonja-friendly release notes for today's changes. |
+| 🚀 Website Update — 27. April 2026 · Kontaktformular | `bafyreigmvd45phnugvl5bjpgofx3q7rf7hlin5wlvpheyo2qojkv4mytru` | Sonja-friendly release notes: contact form now sends via Formsubmit, email consolidated, activation step. |
+| 🚀 Website Update — 27. April 2026 | `bafyreibbvdu5t2axkjfsapzytdiecr6t4m7smoqfovol3ztuketw6pjpnu` | Sonja-friendly release notes for the earlier 27 April changes (Eindrücke, Eigenes, legal pages). |
 | 🚀 Website Update — 26. April 2026 | `bafyreiblbs6kccp4pe4qfps34nbztabneyk2pfuzodnd5onashr64kp57u` | Image refresh batch release notes. |
 | 🚀 Website Update — 30. März 2026 | `bafyreiglfllf3qyrhgq63trfcsijchmjzfrodzgusn424kk55scogr7bge` | Earlier release notes. |
 | 🎨 Brand Design (folder) | `bafyreiamvzbqv34ic75vb37zbug3nqap5gmkme2zymzzb3fau2iz4akbvq` | Logo, palette, typography, mood boards, social media, Geschäftsausstattung. |
