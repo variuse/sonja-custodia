@@ -77,7 +77,10 @@ export interface Translations {
       message: string;
       messagePlaceholder: string;
       submit: string;
+      submitting: string;
       subjectPrefix: string;
+      successMessage: string;
+      errorMessage: string;
     };
   };
   // Footer
@@ -190,7 +193,10 @@ export const translations: Record<Language, Translations> = {
         message: 'Nachricht',
         messagePlaceholder: 'Erzählen Sie mir von Ihrem Anwesen...',
         submit: 'Nachricht senden',
-        subjectPrefix: 'Anfrage über sonjaspeicher-custodia.com',
+        submitting: 'Wird gesendet …',
+        subjectPrefix: 'Kontaktformular - sonjaspeicher-custodia.com',
+        successMessage: 'Vielen Dank — Ihre Nachricht ist angekommen. Sonja meldet sich innerhalb von 24 Stunden.',
+        errorMessage: 'Das Senden hat leider nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie direkt an hello@sonjaspeicher-custodia.com.',
       },
     },
     footer: {
@@ -211,7 +217,7 @@ export const translations: Record<Language, Translations> = {
           },
           {
             heading: 'Kontakt',
-            body: 'Telefon: +34 653 545 612\nE-Mail: hello@sonjaspeicher.com',
+            body: 'Telefon: +34 653 545 612\nE-Mail: hello@sonjaspeicher-custodia.com',
           },
           {
             heading: 'Hosting',
@@ -232,7 +238,7 @@ export const translations: Record<Language, Translations> = {
         sections: [
           {
             heading: 'Verantwortliche Stelle',
-            body: 'Sonja Speicher\nPolígono 5 Parcela 263\n07529 Ariany\nIlles Balears, España\n\nE-Mail: hello@sonjaspeicher.com',
+            body: 'Sonja Speicher\nPolígono 5 Parcela 263\n07529 Ariany\nIlles Balears, España\n\nE-Mail: hello@sonjaspeicher-custodia.com',
           },
           {
             heading: 'Übersicht',
@@ -244,7 +250,7 @@ export const translations: Record<Language, Translations> = {
           },
           {
             heading: 'Kontaktformular',
-            body: 'Das Kontaktformular dieser Website öffnet beim Absenden Ihr lokales E-Mail-Programm und überträgt die Eingaben als E-Mail an hello@sonjaspeicher.com. Es findet keine serverseitige Speicherung oder Übermittlung über Dritte statt.\n\nDie Verarbeitung Ihrer per E-Mail übermittelten Daten erfolgt ausschließlich zur Beantwortung Ihrer Anfrage und zur Anbahnung einer möglichen Geschäftsbeziehung (Art. 6 Abs. 1 lit. b DSGVO). Die Daten werden gelöscht, sobald sie für den Zweck nicht mehr erforderlich sind — spätestens nach Abschluss eines etwaigen Vertrages zuzüglich gesetzlicher Aufbewahrungsfristen.',
+            body: 'Beim Absenden des Kontaktformulars werden die von Ihnen eingegebenen Daten (Name, E-Mail-Adresse, Telefonnummer, Nachricht) an den Dienstleister Formsubmit (FormSubmit) übermittelt, der die Anfrage als E-Mail an hello@sonjaspeicher-custodia.com weiterleitet. Formsubmit verarbeitet die Daten ausschließlich zum Zweck der Zustellung; eine darüber hinausgehende Speicherung oder Auswertung findet nicht statt. Die Server von Formsubmit befinden sich in den USA; eine Datenübermittlung in ein Drittland erfolgt auf Grundlage geeigneter Garantien gemäß Art. 46 DSGVO.\n\nDie Verarbeitung Ihrer übermittelten Daten erfolgt ausschließlich zur Beantwortung Ihrer Anfrage und zur Anbahnung einer möglichen Geschäftsbeziehung (Art. 6 Abs. 1 lit. b DSGVO). Die Daten werden gelöscht, sobald sie für den Zweck nicht mehr erforderlich sind — spätestens nach Abschluss eines etwaigen Vertrages zuzüglich gesetzlicher Aufbewahrungsfristen.',
           },
           {
             heading: 'Cookies und Tracking',
@@ -256,7 +262,7 @@ export const translations: Record<Language, Translations> = {
           },
           {
             heading: 'Kontakt für Datenschutzanfragen',
-            body: 'Bitte richten Sie alle Anfragen zu Ihren Daten an: hello@sonjaspeicher.com.',
+            body: 'Bitte richten Sie alle Anfragen zu Ihren Daten an: hello@sonjaspeicher-custodia.com.',
           },
         ],
       },
@@ -349,7 +355,10 @@ export const translations: Record<Language, Translations> = {
         message: 'Message',
         messagePlaceholder: 'Tell me about your property...',
         submit: 'Send message',
-        subjectPrefix: 'Inquiry via sonjaspeicher-custodia.com',
+        submitting: 'Sending …',
+        subjectPrefix: 'Kontaktformular - sonjaspeicher-custodia.com',
+        successMessage: 'Thank you — your message has been received. Sonja will be in touch within 24 hours.',
+        errorMessage: 'The message could not be sent. Please try again or write directly to hello@sonjaspeicher-custodia.com.',
       },
     },
     footer: {
@@ -370,7 +379,7 @@ export const translations: Record<Language, Translations> = {
           },
           {
             heading: 'Contact',
-            body: 'Phone: +34 653 545 612\nEmail: hello@sonjaspeicher.com',
+            body: 'Phone: +34 653 545 612\nEmail: hello@sonjaspeicher-custodia.com',
           },
           {
             heading: 'Hosting',
@@ -391,7 +400,7 @@ export const translations: Record<Language, Translations> = {
         sections: [
           {
             heading: 'Data Controller',
-            body: 'Sonja Speicher\nPolígono 5 Parcela 263\n07529 Ariany\nIlles Balears, Spain\n\nEmail: hello@sonjaspeicher.com',
+            body: 'Sonja Speicher\nPolígono 5 Parcela 263\n07529 Ariany\nIlles Balears, Spain\n\nEmail: hello@sonjaspeicher-custodia.com',
           },
           {
             heading: 'Overview',
@@ -403,7 +412,7 @@ export const translations: Record<Language, Translations> = {
           },
           {
             heading: 'Contact Form',
-            body: 'The contact form on this website opens your local email program when submitted and transmits the entries as an email to hello@sonjaspeicher.com. No server-side storage or transmission via third parties takes place.\n\nThe processing of your data submitted by email is carried out exclusively for the purpose of responding to your inquiry and initiating a possible business relationship (Art. 6(1)(b) GDPR). The data will be deleted as soon as it is no longer required for that purpose — at the latest after the conclusion of any contract plus statutory retention periods.',
+            body: 'When you submit the contact form, the data you have entered (name, email address, phone number, message) is transmitted to the service provider Formsubmit (FormSubmit), which forwards the request as an email to hello@sonjaspeicher-custodia.com. Formsubmit processes the data solely for the purpose of delivery; no storage or analysis beyond that takes place. Formsubmit\'s servers are located in the United States; any transfer to a third country is carried out on the basis of appropriate safeguards pursuant to Art. 46 GDPR.\n\nThe processing of your submitted data is carried out exclusively for the purpose of responding to your inquiry and initiating a possible business relationship (Art. 6(1)(b) GDPR). The data will be deleted as soon as it is no longer required for that purpose — at the latest after the conclusion of any contract plus statutory retention periods.',
           },
           {
             heading: 'Cookies and Tracking',
@@ -415,7 +424,7 @@ export const translations: Record<Language, Translations> = {
           },
           {
             heading: 'Contact for Privacy Inquiries',
-            body: 'Please direct any inquiries regarding your data to: hello@sonjaspeicher.com.',
+            body: 'Please direct any inquiries regarding your data to: hello@sonjaspeicher-custodia.com.',
           },
         ],
       },
@@ -508,7 +517,10 @@ export const translations: Record<Language, Translations> = {
         message: 'Message',
         messagePlaceholder: 'Parlez-moi de votre propriété...',
         submit: 'Envoyer le message',
-        subjectPrefix: 'Demande via sonjaspeicher-custodia.com',
+        submitting: 'Envoi en cours …',
+        subjectPrefix: 'Kontaktformular - sonjaspeicher-custodia.com',
+        successMessage: 'Merci — votre message a bien été reçu. Sonja vous répondra sous 24 heures.',
+        errorMessage: 'L\'envoi n\'a pas abouti. Veuillez réessayer ou écrire directement à hello@sonjaspeicher-custodia.com.',
       },
     },
     footer: {
@@ -529,7 +541,7 @@ export const translations: Record<Language, Translations> = {
           },
           {
             heading: 'Contact',
-            body: 'Téléphone : +34 653 545 612\nE-mail : hello@sonjaspeicher.com',
+            body: 'Téléphone : +34 653 545 612\nE-mail : hello@sonjaspeicher-custodia.com',
           },
           {
             heading: 'Hébergement',
@@ -550,7 +562,7 @@ export const translations: Record<Language, Translations> = {
         sections: [
           {
             heading: 'Responsable du traitement',
-            body: 'Sonja Speicher\nPolígono 5 Parcela 263\n07529 Ariany\nIlles Balears, Espagne\n\nE-mail : hello@sonjaspeicher.com',
+            body: 'Sonja Speicher\nPolígono 5 Parcela 263\n07529 Ariany\nIlles Balears, Espagne\n\nE-mail : hello@sonjaspeicher-custodia.com',
           },
           {
             heading: 'Aperçu',
@@ -562,7 +574,7 @@ export const translations: Record<Language, Translations> = {
           },
           {
             heading: 'Formulaire de contact',
-            body: 'Le formulaire de contact ouvre votre logiciel de messagerie local au moment de l\'envoi et transmet les saisies sous forme d\'e-mail à hello@sonjaspeicher.com. Aucun stockage côté serveur ni transmission par un tiers n\'a lieu.\n\nLe traitement de vos données transmises par e-mail est effectué exclusivement pour répondre à votre demande et préparer une éventuelle relation commerciale (art. 6 §1 b RGPD). Les données seront supprimées dès qu\'elles ne seront plus nécessaires à cette fin — au plus tard à l\'issue d\'un éventuel contrat, augmentés des durées de conservation légales.',
+            body: 'Lors de l\'envoi du formulaire de contact, les données saisies (nom, adresse e-mail, numéro de téléphone, message) sont transmises au prestataire Formsubmit (FormSubmit), qui transmet la demande sous forme d\'e-mail à hello@sonjaspeicher-custodia.com. Formsubmit traite les données uniquement aux fins de leur transmission ; aucune conservation ni analyse au-delà de cela n\'a lieu. Les serveurs de Formsubmit sont situés aux États-Unis ; un éventuel transfert vers un pays tiers est effectué sur la base de garanties appropriées conformément à l\'art. 46 RGPD.\n\nLe traitement de vos données est effectué exclusivement pour répondre à votre demande et préparer une éventuelle relation commerciale (art. 6 §1 b RGPD). Les données seront supprimées dès qu\'elles ne seront plus nécessaires à cette fin — au plus tard à l\'issue d\'un éventuel contrat, augmentés des durées de conservation légales.',
           },
           {
             heading: 'Cookies et suivi',
@@ -574,7 +586,7 @@ export const translations: Record<Language, Translations> = {
           },
           {
             heading: 'Contact pour les demandes relatives à vos données',
-            body: 'Veuillez adresser toute demande concernant vos données à : hello@sonjaspeicher.com.',
+            body: 'Veuillez adresser toute demande concernant vos données à : hello@sonjaspeicher-custodia.com.',
           },
         ],
       },
@@ -667,7 +679,10 @@ export const translations: Record<Language, Translations> = {
         message: 'Mensaje',
         messagePlaceholder: 'Cuéntame sobre tu propiedad...',
         submit: 'Enviar mensaje',
-        subjectPrefix: 'Consulta vía sonjaspeicher-custodia.com',
+        submitting: 'Enviando …',
+        subjectPrefix: 'Kontaktformular - sonjaspeicher-custodia.com',
+        successMessage: 'Gracias — tu mensaje se ha enviado. Sonja te responderá en un plazo de 24 horas.',
+        errorMessage: 'No se ha podido enviar el mensaje. Inténtalo de nuevo o escribe directamente a hello@sonjaspeicher-custodia.com.',
       },
     },
     footer: {
@@ -688,7 +703,7 @@ export const translations: Record<Language, Translations> = {
           },
           {
             heading: 'Contacto',
-            body: 'Teléfono: +34 653 545 612\nCorreo electrónico: hello@sonjaspeicher.com',
+            body: 'Teléfono: +34 653 545 612\nCorreo electrónico: hello@sonjaspeicher-custodia.com',
           },
           {
             heading: 'Alojamiento',
@@ -709,7 +724,7 @@ export const translations: Record<Language, Translations> = {
         sections: [
           {
             heading: 'Responsable del tratamiento',
-            body: 'Sonja Speicher\nPolígono 5 Parcela 263\n07529 Ariany\nIlles Balears, España\n\nCorreo electrónico: hello@sonjaspeicher.com',
+            body: 'Sonja Speicher\nPolígono 5 Parcela 263\n07529 Ariany\nIlles Balears, España\n\nCorreo electrónico: hello@sonjaspeicher-custodia.com',
           },
           {
             heading: 'Resumen',
@@ -721,7 +736,7 @@ export const translations: Record<Language, Translations> = {
           },
           {
             heading: 'Formulario de contacto',
-            body: 'El formulario de contacto de este sitio abre su programa local de correo al enviarlo y transmite las entradas como correo electrónico a hello@sonjaspeicher.com. No se produce almacenamiento en servidor ni transmisión a terceros.\n\nEl tratamiento de los datos enviados por correo electrónico se realiza exclusivamente para responder a su consulta y preparar una posible relación comercial (art. 6.1.b RGPD). Los datos se eliminan en cuanto dejan de ser necesarios para dicha finalidad — a más tardar tras la conclusión de un eventual contrato, más los plazos legales de conservación.',
+            body: 'Al enviar el formulario de contacto, los datos introducidos (nombre, dirección de correo electrónico, teléfono, mensaje) se transmiten al proveedor Formsubmit (FormSubmit), que reenvía la solicitud como correo electrónico a hello@sonjaspeicher-custodia.com. Formsubmit trata los datos únicamente con la finalidad de su entrega; no se produce almacenamiento ni análisis adicional. Los servidores de Formsubmit se encuentran en los Estados Unidos; cualquier transferencia a un tercer país se realiza sobre la base de garantías adecuadas conforme al art. 46 RGPD.\n\nEl tratamiento de los datos enviados se realiza exclusivamente para responder a su consulta y preparar una posible relación comercial (art. 6.1.b RGPD). Los datos se eliminan en cuanto dejan de ser necesarios para dicha finalidad — a más tardar tras la conclusión de un eventual contrato, más los plazos legales de conservación.',
           },
           {
             heading: 'Cookies y seguimiento',
@@ -733,7 +748,7 @@ export const translations: Record<Language, Translations> = {
           },
           {
             heading: 'Contacto para consultas sobre datos',
-            body: 'Dirija cualquier consulta sobre sus datos a: hello@sonjaspeicher.com.',
+            body: 'Dirija cualquier consulta sobre sus datos a: hello@sonjaspeicher-custodia.com.',
           },
         ],
       },
