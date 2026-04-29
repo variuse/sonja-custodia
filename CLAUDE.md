@@ -50,7 +50,7 @@ All three domains are registered via Porkbun under Frederik's account. Sonja is 
 - `custodia-mallorca.com` — Porkbun URL Forwarding 301 → canonical
 
 **Email — 12 aliases per Porkbun (`hello`, `hi`, `info`, `mail` × 3 domains):**
-- `hello@sonjaspeicher-custodia.com` is a **Porkbun mailbox** ($1.49/mo). All other 11 aliases remain plain forwards. The mailbox exists primarily to provide SMTP credentials so GMX can Send-As from the brand domain.
+- `hello@sonjaspeicher-custodia.com` is a **Porkbun mailbox** ($24/year, locked-in 2026-04-27 just before Porkbun raised the rate to $36/year for new accounts). All other 11 aliases remain plain forwards. The mailbox exists primarily to provide SMTP credentials so GMX can Send-As from the brand domain.
 - The mailbox has a Sieve filter (`rainloop.user`) that redirects all incoming mail to `sonja.speicher@gmx.de` and discards the original — i.e., the mailbox is effectively forward-only at runtime, the inbox stays empty.
 - The other 11 aliases forward directly to `sonja.speicher@gmx.de`.
 - **GMX side:** Send-As verified for `hello@sonjaspeicher-custodia.com`. Sonja replies in GMX → outbound goes via Porkbun SMTP → recipient sees `From: hello@sonjaspeicher-custodia.com`, not her personal GMX address.
